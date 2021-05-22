@@ -76,15 +76,16 @@ public class practice1 {
 			}
 		}
 
-		// select Adults
+		// select 3 Adults
 		driver.findElement(By.id("Adults")).click();
 		w.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//select[@id='Adults']/option[3]")));
 		driver.findElement(By.xpath("//select[@id='Adults']/option[3]")).click();
+		
+		//select 1 child
 		driver.findElement(By.id("Childrens")).click();
 		w.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//select[@id='Childrens']/option[2]")));
 		driver.findElement(By.xpath("//select[@id='Childrens']/option[2]")).click();
 
-		driver.findElement(By.xpath("//select[@id='Infants']/option[0]")).click();
 	}
 
 }
