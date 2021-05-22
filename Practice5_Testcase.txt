@@ -1,0 +1,12 @@
+Test Case - Automate first Menu link of amazon.in and print page title
+
+Steps to Automate:
+1. Launch browser of your choice say., firefox, chrome etc.
+2. Open this URL -  www.amazon.in
+3. Maximize or set size of browser window.
+4. Get the page title and print it.
+5. Now, click on first menu link say 'Amazon Pay' (or choose any other link from the menu list)
+6. Get the page title and print it.
+7. Navigate back to Home Page.
+8. Get the page title and print it. Verify that value matches with output of point no. 4
+9. Close the browser.
