@@ -37,12 +37,12 @@ public class Practice7 {
 			}
 		
 		
-		//Filter "Wait Commands" from dropdown & Print it in output
+		//Filter commands starting from 'W' & Print it in output
 		List<String> selCommand = driver.findElements(By.xpath("//select[@id='selenium_commands']/option")).stream()
 				.filter(s -> s.getText().startsWith("W")).map(s -> s.getText()).collect(Collectors.toList());
 		System.out.println("Selected Selenium Command: " + selCommand);
 		
-		//Select "Wait Commands" from dropdown
+		//Select commands starting from 'W'
 		List<WebElement> selCommandd = driver.findElements(By.xpath("//select[@id='selenium_commands']/option"))
 				.stream().filter(s -> s.getText().startsWith("W")).collect(Collectors.toList());
 		selCommandd.get(0).click();
