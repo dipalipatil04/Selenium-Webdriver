@@ -1,0 +1,14 @@
+Test Case 6 - Automate all the Menu links of techlistic.com
+
+Steps to Automate:
+1. Launch browser of your choice say., firefox, chrome etc.
+2. Open this URL -  https://www.techlistic.com/
+3. Maximize or set size of browser window.
+4. Click on 'Java Tutorial' link and validate page title.
+5. Navigate back to Home Page.
+6. Click on 'Selenium Tutorial' link and validate page title.
+7. Navigate back to Home Page.
+8. Click on 'Selenium Blogs' link and validate page title.
+9. Navigate back to Home Page.
+10. Click on 'TestNG Blogs' link and validate page title.
+11. Close the browser.
