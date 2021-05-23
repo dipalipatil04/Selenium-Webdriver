@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Practice7 {
 
@@ -24,29 +25,18 @@ public class Practice7 {
 		driver.findElement(By.xpath("//input[@value='Selenium Webdriver']")).click();
 		
 		//Select continent "Africa" from static dropdown
-		List<WebElement> conlist = driver.findElements(By.xpath("//select[@id='continents']/option"));
-		for (int i = 0; i < conlist.size();)
-
-			if (conlist.get(i).getText().equals("Africa")) {
-				conlist.get(i).click();
-				break;
-			}
-			else 
-			{
-				i++;
-			}
+		
+		WebElement Drop_Down1 = driver.findElement(By.xpath("//select[@id='continents']"));
+		Select s = new Select(Drop_Down1);
+		s.selectByVisibleText("Africa");
 		
 		
-		//Filter commands starting from 'W' & Print it in output
-		List<String> selCommand = driver.findElements(By.xpath("//select[@id='selenium_commands']/option")).stream()
-				.filter(s -> s.getText().startsWith("W")).map(s -> s.getText()).collect(Collectors.toList());
-		System.out.println("Selected Selenium Command: " + selCommand);
+		//Select multiple options from static dropdown
+		WebElement Drop_Down2 = driver.findElement(By.xpath("//select[@id='selenium_commands']"));
+		Select dd2 = new Select(Drop_Down2);
+		dd2.selectByVisibleText("WebElement Commands");
+		dd2.selectByIndex(3);
 		
-		//Select commands starting from 'W'
-		List<WebElement> selCommandd = driver.findElements(By.xpath("//select[@id='selenium_commands']/option"))
-				.stream().filter(s -> s.getText().startsWith("W")).collect(Collectors.toList());
-		selCommandd.get(0).click();
-		selCommandd.get(1).click();
 	}
 
 }
